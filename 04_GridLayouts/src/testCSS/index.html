@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../output.css">
+    <title>Test</title>
+</head>
+
+<body>
+    <h1 class="underline bg-orange-500">Lorem ipsum dolor sit amet.</h1>
+
+    <!-- equal -->
+    <h1>equal layout</h1>
+    <div class="grid gap-4 m-4 sm:grid-cols-2 grid-cols-2"> 
+        <!-- here first grid-cols-2 for the above smaller device and second one for below smaller device -->
+        <div class="min-h-[100px] rounded bg-orange-500 shadow-xl "></div>
+        <div class="min-h-[100px] rounded bg-teal-500 shadow-xl"></div>
+    </div>
+
+
+    <div class="grid gap-4 m-4 sm:grid-cols-2"> 
+         <!-- here grid-cols-2 for above smaller device otherwise it grid-cols-1 -->
+        <div class="min-h-[100px] rounded bg-orange-500 shadow-xl "></div>
+        <div class="min-h-[100px] rounded bg-teal-500 shadow-xl"></div>
+        <div class="min-h-[100px] rounded bg-red-500 shadow-xl"></div>
+    </div>
+
+    <!-- non equal -->
+    <h1>non equal layout</h1>
+    <div class="grid gap-4 m-4 sm:grid-cols-12">
+        <!--  here we are deviding the screen into 12 parts and then applied col-span individual element -->
+        <div class="min-h-[100px] rounded bg-orange-500 shadow-xl sm:col-span-2 hidden sm:block"></div>
+        <div class="min-h-[100px] rounded bg-teal-500 shadow-xl sm:col-span-8"></div>
+        <div class="min-h-[100px] rounded bg-red-500 shadow-xl sm:col-span-2 hidden sm:block"></div>
+    </div>
+</body>
+
+</html>
